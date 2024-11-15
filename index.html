@@ -147,7 +147,104 @@
             text-decoration: none;
         }
 
-        /* End of styleing linkcontainer */
+        /* End of styling linkcontainer */
+
+        /* Start of styling Project Card */
+        .projectcard{
+            font-size: small;
+            background-color: #fff;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding-bottom: 24px;
+        }
+
+        .projectcard h4, .projectcard p{
+            padding-left: 16px;
+        }
+
+        .projectcard img{
+            display: block;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+            background-image: url("/img/imgplaceholder.png");
+            text-indent: -9999px;
+        }
+
+        .projectcard .scope{
+            text-transform: uppercase;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .projectcard:hover{
+            transition: 0.45s ease-out;
+            transform: scale(1.05);
+        }
+
+        .projectcard a{
+            text-decoration: none;
+            color: #808080;
+            transform: scale(1.0);
+        }
+
+        .projectcard span{
+            display: inline-block;
+            font-size: x-small;
+            align-content: space-between;
+            border-radius: 6px;
+            margin: 4px;
+            background-color: #20b2aa;
+            padding: 5px 10px;
+            color: #fff;
+            white-space: nowrap;
+        }
+
+        /* End of styling Project Card */
+
+        /* Start of styling project section and showcasecontainer */
+
+        .sectiontitle,.logo {
+            font-size: xx-large;
+            font-weight: 700;
+            color: #20b2aa;
+        }
+
+        #projectsection{
+            width: 80%;
+            margin: 0 auto;
+            height: 100dvh;
+        }
+
+        .showcasecontainer{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        /* End of styling of project and showcasecontainer*/
+
+        /* Start of styling miscellaneous elements */
+
+        .top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top a{
+            margin-top: 20px;
+            text-decoration: none;
+            color: #20b2aa;
+            font-size: small;
+        }
+
+        /* End of styling miscellaneous elements */
 
 </style>
 
@@ -163,8 +260,8 @@
         <div><!-- Un-comment the line here to add a logo --></div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#">Let's Talk</a></li>
             </ul>
         </nav>
@@ -206,12 +303,12 @@
         
         <!-- Right section -->
         <div class="right-div">
-            <div>
-                <h1>Hi! My name is &lt;Your Name Here&gt;</h1>
+            <div class="text">
+                <h1>Hi! <span class="typing"></span></h1>
                 <p>Good day, visitor. Use this template to start your portfolio development journey.</p>
             </div>
             <div class="linkcontainer" >
-                <a href="#">View Projects below.</a>
+                <a href="#projects">View Projects below.</a>
             </div>
         </div>
 
@@ -220,15 +317,109 @@
 
     
     <!-- Start of project section, using grids -->
+    
+    <a name="projects"></a>
+    <section id="projectsection">
+
+        <div class="sectiontitle">
+            Projects
+        </div>
+
+        <div class="showcasecontainer">
+            <!-- Project Cards go here -->
+             
+            <!-- Project card #1 -->
+             <div class="projectcard">
+                <a href="#">
+                    <img src="/img/web-design.jpg" alt="Picture of Web Design">
+                    <!-- Project Name -->
+                    <h4>Community Web Portal Design</h4>
+                    <p class="scope">Web Design</p>
+                    <p>
+                        <span>UI/UX</span><span>HTML</span><span>CSS</span>
+                    </p>
+                </a>
+             </div>
+
+            <!-- Project card #2 -->
+             <div class="projectcard">
+                <a href="#">
+                    <img src="/img/mobile-app.jpg" alt="Picture of Mobile App">
+                    <!-- Project Name -->
+                    <h4>Expense Calculator Web App</h4>
+                    <p class="scope">JavaScript Development</p>
+                    <p>
+                        <span>User Interaction</span><span>Application Logic</span>
+                    </p>
+                </a>
+             </div>
+
+            <!-- Project card #3 -->
+             <div class="projectcard">
+                <a href="#">
+                    <img src="/img/data-tracking.jpg" alt="Picture of Analytics">
+                    <!-- Project Name -->
+                    <h4>Enrollment Tracker</h4>
+                    <p class="scope">Database Design</p>
+                    <p>
+                        <span>SQL</span><span>Data Analysis</span>
+                    </p>
+                </a>
+             </div>
+
+            <!-- Project card #4 -->
+             <div class="projectcard">
+                <a href="#">
+                    <img src="/img/chess.jpg" alt="Picture of Chess Pieces">
+                    <!-- Project Name -->
+                    <h4>Chess Game</h4>
+                    <p class="scope">Java</p>
+                    <p>
+                        <span>Game Development</span>
+                    </p>
+                </a>
+             </div>
+            <!-- Project card #5 -->
+             <div class="projectcard">
+                <a href="#">
+                    <img src="/img/fitness-tracking.jpg" alt="Picture of Fitness Watch App">
+                    <!-- Project Name -->
+                    <h4>Fitness Tracker</h4>
+                    <p class="scope">App Development</p>
+                    <p>
+                        <span>SwiftUI</span><span>Swift Programming</span>
+                    </p>
+                </a>
+             </div>
+
+            <!-- Project card #6 -->
+             <div class="projectcard">
+                <a href="#">
+                    <img src="/img/photography.jpg" alt="Picture of Camera and Photographer">
+                    <!-- Project Name -->
+                    <h4>SG Arts Award</h4>
+                    <p class="scope">Photography</p>
+                    <p>
+                        <span>Creative</span><span>Competition</span>
+                    </p>
+                </a>
+             </div>
+
+        </div>
+
+        <div class="top">
+            <a href="#top">&#x25B2; Back to Top</a>
+        </div>
+
+    </section>
 
     <!-- End of project section -->
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        
 
     var options = {
-        strings: ['I&apos;m &lt;Your Name Here!&gt;', 'Thanks for visiting!'],
+        strings: ['My name is Martin!'],
         typeSpeed: 100,
         backSpeed:100,
         loop: false
