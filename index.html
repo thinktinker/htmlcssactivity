@@ -5,11 +5,223 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio Page: Your name here</title>
 
+<!-- Internal styles here (to move to external css later) -->
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* reset css to default */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            /* outline: 1px dashed #808080; */
+        }
+
+        /* set up the page background and styles */
+        html, body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #e0ffff;
+        }
+
+        /* Start of styling header and nav */
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px 70px 70px;   /* top, right, bottom, left */
+            width: 80%;
+            margin: auto;
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li{
+            list-style: none;
+            margin-inline: 30px;
+        }
+
+        nav ul li a{
+            color: #008080;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover{
+            color: #fdbd31;
+            transition: 0.3s;
+        }
+
+        /* End of styling header and nav */
+
+        /* Start of styling for main section */
+
+        #mainsection{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            column-gap: 20px;
+            width: 80%;
+            margin: auto;
+            height: 100dvh;
+        }
+
+        .left-div{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .right-div{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: normal;
+            width: 90%;
+            margin: 20px auto; /* top-bottom left-right */
+        }
+
+        /* End of styling for main section*/
+
+        /* Start of styling the profile container */
+
+        .profilecontainer{
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+
+        .profilecontainer p span{
+            display: block;
+        }
+
+        .rounded-image{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0px 5px; /* top-bottom left-right */
+            border: 5px solid white;
+        }
+
+        /* End of styling the profile container */
+
+        /* Start of styling the profile details container */
+
+        .profiledetails ul li{
+            list-style: none;
+            font-size: small;
+            padding-left: 20px;
+            line-height: 25px;
+        }
+
+        .profiledetails .subheader{
+            display: block;
+            padding: 5px 0;
+            font-size: medium;
+            border-bottom: 1px dashed lightblue;
+            border-top: 1px dashed lightblue;
+        }
+
+        /* End of style the profile details container */
+
+        /* Start of styling linkcontainer */
+
+        .linkcontainer{
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .linkcontainer a{
+            padding: 10px 20px;
+            font-size: small;
+            background: #008080;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* End of styleing linkcontainer */
+
+</style>
+
 </head>
 <body>
 
     <!-- Set up your page structure here -->
 
+
+    <!-- Start of header -->
+    <a name="top"> <!-- This is an anchor tag, equivalent to bookmark --> </a>
+    <div class="header">
+        <div><!-- Un-comment the line here to add a logo --></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Let's Talk</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- End of header -->
+
+
+    <!-- Start of main section -->
+    <section id="mainsection">
+        
+        <!-- Left section -->
+        <div class="left-div">
+            <!-- Profile information -->
+            <div class="profilecontainer">
+                <img src="/img/alex.png" class="rounded-image" alt="Profile photo of Alex">
+                <p>
+                    <span>Your name</span>
+                    <span>Full Stack Developer</span>
+                </p>
+            </div>
+            <!-- Profile details infomation -->
+             <div class="profiledetails">
+                <span class="subheader">Codes in:</span>
+                <ul>
+                    <li>HTML . CSS . JavaScript</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                </ul>
+
+                <span class="subheader">Works in:</span>
+                <ul>
+                    <li>React</li>
+                    <li>Spring Boot</li>
+                    <li>jUnit + Mockito (Unit Tests)</li>
+                </ul>
+
+             </div>
+        </div>
+        
+        <!-- Right section -->
+        <div class="right-div">
+            <div>
+                <h1>Hi! My name is &lt;Your Name Here&gt;</h1>
+                <p>Good day, visitor. Use this template to start your portfolio development journey.</p>
+            </div>
+            <div class="linkcontainer" >
+                <a href="#">View Projects below.</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- End of main section -->
+
+    
+    <!-- Start of project section, using grids -->
+
+    <!-- End of project section -->
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
