@@ -1,200 +1,230 @@
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-    /* reset css to default */
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    }
+/* reset css to default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* outline: 1px dashed hwb(0 23% 36%); */
+}
 
-    /* set the page background and styles */
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: lightcyan;
-    }
+/* setting page background and styles */
 
-    /* Start of styling header and nav */
-    /* ******************************* */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: lightcyan;
+}
 
-    /* set the header styles */
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 20px 70px 70px;  /*top , right, bottom, left*/
-        width: 80%;
-        margin: auto;
-    }
+/* Start of styling header and nav */
 
-    /* set the logo styles */
-    .sectiontitle, .logo{
-        font-size: 45px;
-        font-weight: 700;
-        color: lightseagreen;
-    }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 70px 70px; /* top, right, bottom , left */
+  width: 80%;
+  margin: auto;
+}
 
-    /* set the navigation styles */
-    nav ul{
-        display: flex;
-    }
+nav ul {
+  display: flex;
+}
 
-    nav ul li{
-        list-style: none;
-        margin-inline: 30px;
-    }
+nav ul li {
+  list-style: none;
+  margin-inline: 30px;
+}
 
-    nav ul li a{
-        color: teal;
-        text-decoration: none;
-    }
+nav ul li a {
+  color: #008080;
+  text-decoration: none;
+}
 
-    nav ul li:hover a{
-        color:#fdbd31;
-        transition: 0.3s;
-    }
+nav ul li a:hover {
+  color: #fdbd31;
+  transition: 0.3s;
+}
 
-    /* ***************************** */
-    /* End of styling header and nav */
+/* End of styling header and nav */
 
+/* Start of styling main section */
 
-    /* Start of styling mainsection */
-    /* **************************** */
-    
-    /* set the main cointainer as a grid of columns */
-    #mainsection {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 20px;
-        margin: auto;
-        width: 80%;
-        height: 100dvh;
-    }
+#mainsection {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+  margin: auto;
+  width: 80%;
+  height: 100dvh;
+}
 
-    /* set the left div column */
-    /* A short intro on how flex works: https://www.youtube.com/watch?v=_tlxwc9ssH4 */
-    .left-div {
-        flex: 1; 
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center; */
-        align-items: end;
-    }
+.left-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
 
-    /* set the right div column */
-    .right-div {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center; */
-        align-items: normal;
-    }
+.right-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  width: 90%;
+  margin: 28px auto; /* top-bottom left-right */
+}
 
-    /* set the profilecontainer */
-    .profilecontainer {
-        display: flex;
-        align-items: center;
-        padding-left: 10px;
-        margin-bottom: 10px;
-        width: 300px;
-    }
+.profile-container {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+}
 
-    /* set the profile details */
-    .profiledetails {
-        display: block;
-        padding: 20px;
-        width: 280px;
-        margin-right: 10px;
-        color: gray;
-        font-weight: normal;
-    }
+.rounded-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0px 5px 0px 5px;
+  border: 5px solid white;
+}
 
-    /* set the rounded image */
-    .rounded-image {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin: 0px 5px 0px 5px;
-        border: 5px solid white;
-    }
+.profile-container p span {
+  display: block;
+}
 
-    /* set the profile text (targets span tags within <p> tags in profilecontainer class) */
-    .profilecontainer p span {
-        display: block;
-    }
+.profile-details ul li {
+  list-style: none;
+  font-size: small;
+  padding-left: 20px;
+  line-height: 25px;
+}
 
-    /* set the profile text (targets span tags within <p> tags in profilecontainer class) */
-    .strong {
-        font-weight: bold;
-    }
+.profile-details .subheader {
+  display: block;
+  padding: 5px 0;
+  font-size: medium;
+  border-bottom: 1px dashed lightblue;
+  border-top: 1px dashed lightblue;
+}
 
-    /* set the profile details' list */
-    .profiledetails ul li{
-        list-style-type: none;
-        font-size: small;
-        padding-left: 20px;
-        line-height: 25px;
-    }
+.linkcontainer {
+  display: flex;
+  margin-top: 10px;
+}
 
-    /* sets the subheaders within profiledetails class */
-    .profiledetails .subheader{
-        display: block;
-        margin-top: 10px;
-        padding: 5px 0px;
-        font-size: medium;
-        border-bottom: 1px dashed lightblue;
-        border-top: 1px dashed lightblue;
-    }
+.linkcontainer a {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #008080;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
 
-    /* set the linkscontainer */
-    .linkcontainer{
-        display: flex;
-        margin-top: 10px;
-    }
+/* Start of styling project card */
+.projectcard {
+  background-color: #fff;
+  font-size: small;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 24px;
+}
 
-    /* set the <a> tags' styles */
-    .linkcontainer a{
-        padding: 10px 20px;
-        font-size: 16px;
-        background: teal;
-        color: white;
-        border: 2px solid #fff;
-        border-radius: 10px;
-        margin-right: 5px;
-        cursor: pointer;
-        text-decoration: none;
-    }
+.projectcard h4,
+.projectcard p {
+  padding-left: 16px;
+}
 
-    .text{
-        margin-top: 100px;
-    }
+.projectcard img {
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-image: url("img/imgplaceholder.png");
+  text-indent: -9999px;
+}
 
-    /* set the text class style for the animated text in <h1> tag */
-    .text h1{
-    font-size: 36px;
-    line-height: 72px;
-    letter-spacing: 2px;
-    color: lightslategray;
-    }
+.projectcard .scope {
+  text-transform: uppercase;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 
-    /* set the <a> link tags' style (targets <a> tags within text class) */
-    .text p{
-        font-size: 16px;
-        letter-spacing: 1px;
-        line-height: 30px;
-        padding-bottom: 20px;
-    }
+.projectcard:hover {
+  transition: 0.45s ease-out;
+  transform: scale(1.05);
+}
 
-    /* ************************** */
-    /* End of styling mainsection */
+.projectcard a {
+  text-decoration: none;
+  color: #808080;
+  transform: scale(1);
+}
 
+.projectcard span {
+  display: inline-block;
+  font-size: x-small;
+  align-content: space-between;
+  border-radius: 6px;
+  margin: 4px;
+  background-color: #20b2aa;
+  padding: 5px 10px;
+  color: #fff;
+  white-space: nowrap;
+}
 
-    /* Start of styling projectsection */
-    /* ******************************* */
+/* End of styling project card */
 
-        /* Include the styles for projectsection here */
+/* Start of styling miscellaneous items */
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    /* ***************************** */
-    /* End of styling projectsection */
+.top a {
+  margin-top: 20px;
+  text-decoration: none;
+  color: lightseagreen;
+  font-size: small;
+}
+
+/* End of styling miscellaneous items */
+
+/* Start of Styling of project section and showcase container */
+
+.sectiontitle,
+.logo {
+  font-size: xx-large;
+  font-weight: 700;
+  color: #20b2aa;
+}
+
+#projectsection {
+  width: 80%;
+  height: 100dvh;
+  margin: auto;
+}
+
+.showcasecontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* End of Styling of project section and showcase container */
+
+/* End of styling main section */
